@@ -27,9 +27,18 @@ router.ws('/ws', function (ws, req) {
 
 		if (!msg.error) {
 			switch (msg.type) {
+				case 'ping':
+					msg.type = 'pong';
+					ws.send(JSON.stringify(msg));
+					break;
 				case 'keystroke':
-					for (let key of msg.data.keys) {
-						robot.keyTap(key);
+					for (let combinations of msg.data.keys) {
+						if (typeof combinations === 'string') {
+							robot.keyTap(combinations);
+						} else {
+							let key = combinations.pop();
+							robot.keyTap(key, combinations);
+						}
 					}
 					break;
 

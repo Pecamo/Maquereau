@@ -17,13 +17,27 @@ function initWS() {
 	}
 
 	ws.onopen = function (event) {
-		console.log("WebSocket open");
-		ws.send({ type: "ping", data: { message: "echo" } });
+		ws.send({ type: "ping", data: { time: new Date() } });
 	}
 
 	ws.onmessage = function (event) {
-		var data = JSON.parse(event.data);
-		console.log(data);
+		var message = JSON.parse(event.data);
+
+		switch (message.type) {
+			case 'pong':
+				console.log("Pong:", message.data);
+				break;
+			case 'process-changed':
+				// TODO put layouts in cache and try to recover them
+				queryLayout(message.data.name);
+				break;
+			case 'layout':
+				console.log('New layout:', message.data);
+				break;
+			default:
+				console.warn('Unhandled message:', message);
+				break;
+		}
 	}
 
 	ws.onclose = function (event) {
@@ -33,4 +47,9 @@ function initWS() {
 	ws.onerror = function (event) {
 		console.error("WebSocket error:", event);
 	}
+}
+
+function queryLayout(process) {
+	console.log('Querying layout', process)
+	ws.send({ type: 'layout-request', data: { process: process } });
 }
