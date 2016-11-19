@@ -9,20 +9,49 @@
         "static": "Opens a new tab"
       },
       "background-color": {
-          "static": "#00FF00"
+        "static": "#347DC2"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "new-tab.png"
+        "static": "new-tab_white.png"
       },
-      "width": 2,
+      "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          "Ctrl",
-          "T"
+          [
+            "control",
+            "t"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Close"
+      },
+      "subtitle": {
+        "static": "Closes current tab"
+      },
+      "background-color": {
+        "static": "#DF2025"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "close-tab_white.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "w"
+          ]
         ]
       }
     },
@@ -34,21 +63,104 @@
         "static": "Reopens last closed tab"
       },
       "background-color": {
-        "static": "#00FF00"
+        "static": "#FCD207"
       },
       "enable": {
-        "stateVariable": "hasClosedTab"
+        "static": true
       },
       "icon": {
         "static": "back-arrows.png"
       },
-      "width": 2,
+      "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          "Ctrl",
-          "Shift",
-          "T"
+          [
+            "control",
+            "shift",
+            "t"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Fullscreen"
+      },
+      "subtitle": {
+        "static": "Switches between fullscreen and windowed mode"
+      },
+      "background-color": {
+        "static": "#4BB847"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "fullscreen_white.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "f11"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Left Tab"
+      },
+      "subtitle": {
+        "static": "Shows the left tab"
+      },
+      "background-color": {
+        "static": "#FFFFFF"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "simple-left-arrow.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "tab"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Right Tab"
+      },
+      "subtitle": {
+        "static": "Shows the right tab"
+      },
+      "background-color": {
+        "static": "#FFFFFF"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "simple-right-arrow.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "tab"
+          ]
         ]
       }
     },
@@ -73,30 +185,6 @@
       "action": {
         "remoteOpenUrl": {
           "static": "http://www.google.ch"
-        }
-      }
-    },
-    {
-      "title": {
-        "static": "Mirror"
-      },
-      "subtitle": {
-        "static": "Open remote's current tab on this device"
-      },
-      "background-color": {
-        "static": "#0000FF"
-      },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "same-tab_white.png"
-      },
-      "width": 2,
-      "height": 1,
-      "action": {
-        "localOpenUrl": {
-          "stateVariable": "currentTabURL"
         }
       }
     }
