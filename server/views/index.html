@@ -9,21 +9,21 @@
 		<link rel="stylesheet/less" type="text/css" href="index.less" />
 	</head>
 	<body>
-		<script src="script/lib/promise.min.js"></script>
-		<script src="script/lib/fetch.js"></script>
-		<script src="script/lib/less.js"></script>
-		<script src="script/main.js"></script>
+		<script src="script/lib/promise.min.js" defer></script>
+		<script src="script/lib/fetch.js" defer></script>
+		<script src="script/lib/less.js" defer></script>
+		<script src="script/lib/vue.js" defer></script>
+
+		<script src="script/main.js" defer></script>
 
 		<div id="container">
 			<h1>Maquereau</h1>
 			<div class="tiles">
-				<div class="tile"></div>
-				<div class="tile"></div>
-				<div class="tile"></div>
-				<div class="tile"></div>
-				<div class="tile"></div>
-				<div class="tile"></div>
-				<div class="tile"></div>
+				<div class="tile" v-for="tile in tiles" v-bind:data-keystroke="tile.action.sendKeyStroke">
+					<h3 class="title">{{ tile.title.static }}</h3>
+					<img class="icon" v-bind:src="'/static/img/' + tile.icon.static">
+					<p class="subtitle">{{ tile.subtitle.static }}</p>
+				</div>
 			</div>
 		</div>
 	</body>
