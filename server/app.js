@@ -7,16 +7,30 @@ let app = express()
 let router = express.Router();
 let ws = require('express-ws')(app);
 
+var robot = require("robotjs");
+
 app.use(router)
 app.use(express.static('views/static'))
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 });
 
-router.ws('/ws', function(ws, req) {
-	ws.on('message', function(msg) {
-		ws.send(msg);
+router.ws('/ws', function (ws, req) {
+	ws.on('message', function (msg) {
+		var msg = JSON.parse(msg);
+
+		if (!msg.error) {
+			switch (msg.type) {
+				case 'keystroke':
+					for (let key of msg.data.keys) {
+
+						robot.keyTap(key);
+					}
+
+					break;
+			}
+		}
 	});
 });
 

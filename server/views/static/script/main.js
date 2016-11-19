@@ -1,3 +1,5 @@
+var ws;
+
 window.onload = function () {
 	onPageLoad();
 }
@@ -7,7 +9,7 @@ function onPageLoad() {
 };
 
 function initWS() {
-	var ws = new WebSocket(document.location.origin.replace(/^http/, "ws") + "/ws");
+	ws = new WebSocket(document.location.origin.replace(/^http/, "ws") + "/ws");
 
 	ws._send = ws.send;
 	ws.send = function (obj) {
