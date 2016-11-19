@@ -30,6 +30,18 @@ var vm = new Vue({
 				}
 			}
 		]
+	},
+	methods: {
+		onTileClicked: function (action, event) {
+			if (action.sendKeyStroke) {
+				ws.send({
+					type: 'keystroke',
+					data: {
+						'keys': action.sendKeyStroke
+					}
+				});
+			}
+		}
 	}
 })
 

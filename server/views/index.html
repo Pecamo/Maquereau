@@ -19,7 +19,11 @@
 		<div id="container">
 			<h1>Maquereau</h1>
 			<div class="tiles">
-				<div class="tile" v-for="tile in tiles" v-bind:style="{ backgroundImage: 'url(\'/img/icons/' + tile.icon.static + '\')' }" v-bind:data-keystroke="tile.action.sendKeyStroke">
+				<div class="tile"
+					v-for="tile in tiles"
+					v-bind:style="{ backgroundImage: 'url(\'/img/icons/' + tile.icon.static + '\')' }"
+					v-bind:data-keystroke="tile.action.sendKeyStroke"
+					v-on:click="onTileClicked(tile.action, $event)">
 					<h3 class="title">{{ tile.title.static }}</h3>
 					<p class="subtitle">{{ tile.subtitle.static }}</p>
 				</div>
