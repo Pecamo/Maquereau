@@ -31,10 +31,6 @@ h1, h2, h3 {
 	font-family: 'Geo', sans-serif;
 
 	font-weight: 300;
-
-	.text {
-		padding: 2px 8px;
-	}
 }
 
 h1 {
@@ -43,12 +39,10 @@ h1 {
 
 h2 {
 	font-size: 35px;
-	margin-top: 25px;
 }
 
 h3 {
 	font-size: 25px;
-	margin-top: 20px;
 }
 
 img {
@@ -85,13 +79,23 @@ p {
 
 	display: flex;
 	flex-wrap: wrap;
-}
 
-.tile {
-	position: relative;
-	border: 4px solid white;
-	margin: 10px;
-	flex: 1 1 calc(49% - 10px);
+	.tile {
+		@margin: 10px;
+		position: relative;
+		
+		flex: 1 1 calc(49% - @margin);
+		
+		border: 4px solid white;
+		
+		margin: @margin;
+		padding: 30px;
+
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}	
 }
 
 ::selection {

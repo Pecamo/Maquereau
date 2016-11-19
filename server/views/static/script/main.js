@@ -1,5 +1,38 @@
 var ws;
 
+var vm = new Vue({
+	el: '#container',
+	data: {
+		tiles: [
+			{
+				"title":{
+					"static":"New"
+				},
+				"subtitle":{
+					"static":"Opens a new tab"
+				},
+				"background-color":{
+					"static":"#00FF00"
+				},
+				"enable":{
+					"static":true
+				},
+				"icon":{
+					"static":"new-tab.png"
+				},
+				"width":2,
+				"height":1,
+				"action":{
+					"sendKeyStroke":[
+						"Ctrl",
+						"T"
+					]
+				}
+			}
+		]
+	}
+})
+
 window.onload = function () {
 	onPageLoad();
 }
@@ -32,7 +65,8 @@ function initWS() {
 				queryLayout(message.data.name);
 				break;
 			case 'layout':
-				console.log('New layout:', message.data);
+				console.log('New layout:', JSON.stringify(message.data));
+				vm.tiles = message.data.tiles;
 				break;
 			default:
 				console.warn('Unhandled message:', message);
@@ -50,6 +84,6 @@ function initWS() {
 }
 
 function queryLayout(process) {
-	console.log('Querying layout', process)
+	console.log('Querying layout', process);
 	ws.send({ type: 'layout-request', data: { process: process } });
 }
