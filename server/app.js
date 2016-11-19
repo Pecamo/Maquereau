@@ -22,6 +22,10 @@ router.ws('/ws', function (ws, req) {
 
 		if (!msg.error) {
 			switch (msg.type) {
+				case 'ping':
+					msg.type = 'pong';
+					ws.send(JSON.stringify(msg));
+					break;
 				case 'keystroke':
 					for (let combinations of msg.data.keys) {
 						if (typeof combinations === 'string') {
@@ -30,8 +34,6 @@ router.ws('/ws', function (ws, req) {
 							let key = combinations.pop();
 							robot.keyTap(key, combinations);
 						}
-
-
 					}
 
 					break;
