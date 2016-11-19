@@ -50,7 +50,7 @@ function initWS() {
 	}
 
 	ws.onopen = function (event) {
-		ws.send({ type: "ping", data: { time: new Date() } });
+		ws.send({ type: 'hello', data: {} });
 	}
 
 	ws.onmessage = function (event) {

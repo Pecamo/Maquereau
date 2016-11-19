@@ -21,7 +21,7 @@
 			<div class="tiles">
 				<div class="tile" v-for="tile in tiles" v-bind:data-keystroke="tile.action.sendKeyStroke">
 					<h3 class="title">{{ tile.title.static }}</h3>
-					<img class="icon" v-bind:src="'/static/img/' + tile.icon.static">
+					<img class="icon" v-bind:src="'/img/icons/' + tile.icon.static">
 					<p class="subtitle">{{ tile.subtitle.static }}</p>
 				</div>
 			</div>
