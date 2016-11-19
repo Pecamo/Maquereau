@@ -8,13 +8,15 @@ let app = express();
 let router = express.Router();
 let ws = require('express-ws')(app);
 
-var robot = require("robotjs");
+let robot = require('robotjs');
+
+let getFocusProcess = require('./get-focus-process');
 
 app.use(router);
 app.use(express.static('views/static'));
 
 let similarProcesses = {
-	"chromium" : "chrome"
+	"chromium": "chrome"
 };
 
 router.get('/', function (req, res) {
@@ -31,6 +33,14 @@ router.ws('/ws', function (ws, req) {
 					msg.type = 'pong';
 					ws.send(JSON.stringify(msg));
 					break;
+				case 'hello':
+					ws.send(JSON.stringify({
+						type: "process-changed",
+						data: {
+							name: currentProcess
+						}
+					}));
+					break;
 				case 'keystroke':
 					for (let combinations of msg.data.keys) {
 						if (typeof combinations === 'string') {
@@ -43,20 +53,49 @@ router.ws('/ws', function (ws, req) {
 					break;
 
 				case 'layout-request':
-					var processName = msg.data.process;
+					let processName = msg.data.process;
+
 					if (processName in similarProcesses) {
 						processName = similarProcesses[processName];
 					}
-					var fileName = __dirname + '/processes/' + processName + '.json';
-					var fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-					var payload = JSON.stringify({type: 'layout', data: fileContent});
-					ws.send(payload);
+
+					let fileName = __dirname + '/processes/' + processName + '.json';
+
+					if (fs.existsSync(fileName)) {
+						let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
+						let payload = JSON.stringify({type: 'layout', data: fileContent});
+						ws.send(payload);
+					} else {
+						console.warn('Layout for "' + processName + '" doesn\'t exists');
+					}
 			}
 		} else {
 			console.error(msg.error);
 		}
 	});
 });
+
+let currentProcess = "";
+function processWatcher() {
+	setInterval(function () {
+		getFocusProcess(function (process) {
+			if (currentProcess !== process) {
+				currentProcess = process;
+
+				for (let client of ws.getWss().clients) {
+					client.send(JSON.stringify({
+						type: "process-changed",
+						data: {
+							name: process
+						}
+					}));
+				}
+			}
+		})
+	}, 500);
+}
+
+processWatcher();
 
 // Start the server on port 3000.
 let server = app.listen(3000, () => {
