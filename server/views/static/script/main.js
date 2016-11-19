@@ -11,7 +11,7 @@ function initWS() {
 
 	ws._send = ws.send;
 	ws.send = function (obj) {
-		ws._send(angular.toJson(obj));
+		ws._send(JSON.stringify(obj));
 	}
 
 	ws.onopen = function (event) {
