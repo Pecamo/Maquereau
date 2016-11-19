@@ -23,9 +23,15 @@ router.ws('/ws', function (ws, req) {
 		if (!msg.error) {
 			switch (msg.type) {
 				case 'keystroke':
-					for (let key of msg.data.keys) {
+					for (let combinations of msg.data.keys) {
+						if (typeof combinations === 'string') {
+							robot.keyTap(combinations);
+						} else {
+							let key = combinations.pop();
+							robot.keyTap(key, combinations);
+						}
 
-						robot.keyTap(key);
+
 					}
 
 					break;
