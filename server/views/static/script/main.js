@@ -65,7 +65,6 @@ function initWS() {
 				queryLayout(message.data.name);
 				break;
 			case 'layout':
-				console.log('New layout:', JSON.stringify(message.data));
 				vm.tiles = message.data.tiles;
 				break;
 			default:

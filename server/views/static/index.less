@@ -91,14 +91,26 @@ p {
 		margin: @margin;
 		padding: 30px;
 
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
+		text-align: center;	
 
-		.icon {
-			width: 50px;
-			margin: auto;
+		background-size: auto 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		.title {
+			font-size: 3vh;
+			position: absolute;
+			top: 5%;
+			left: 0;
+			right: 0;
+		}
+
+		.subtitle {
+			font-size: 1vh;
+			position: absolute;
+			bottom: 5%;
+			left: 0;
+			right: 0;
 		}
 	}
 }
