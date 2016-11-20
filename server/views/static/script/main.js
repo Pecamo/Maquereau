@@ -44,6 +44,22 @@ var vm = new Vue({
 					}
 				});
 			}
+		},
+		altTab: function () {
+			ws.send({
+				type: 'keystroke',
+				data: {
+					'keys': [['alt', 'tab']]
+				}
+			});
+		},
+		altShiftTab: function () {
+			ws.send({
+				type: 'keystroke',
+				data: {
+					'keys': [['alt', 'shift', 'tab']]
+				}
+			});
 		}
 	}
 })
