@@ -12,6 +12,12 @@ let robot = require('robotjs');
 
 let getFocusProcess = require('./get-focus-process');
 
+let titleOf = {
+	"chrome" : "Google Chrome",
+	"chromium" : "Google Chrome",
+	"POWERPNT" : "PowerPoint"
+};
+
 app.use(router);
 app.use(express.static('views/static'));
 
@@ -37,7 +43,8 @@ router.ws('/ws', function (ws, req) {
 					ws.send(JSON.stringify({
 						type: "process-changed",
 						data: {
-							name: currentProcess
+							name: currentProcess,
+							title: titleOf[currentProcess]
 						}
 					}));
 					break;
@@ -86,7 +93,8 @@ function processWatcher() {
 					client.send(JSON.stringify({
 						type: "process-changed",
 						data: {
-							name: process
+							name: process,
+							title: titleOf[process]
 						}
 					}));
 				}

@@ -3,81 +3,54 @@
   [
     {
       "title": {
-        "static": "Save"
+        "static": "Run"
       },
       "subtitle": {
-        "static": "Shows previous step"
+        "static": "Runs the current configuration"
       },
       "style": {
-        "background-color": "#D14424"
+        "background-color": "#3C3F41"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "simple-left-arrow_white.png"
+        "static": "WS-play.png"
       },
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "left"
+            "shift",
+            "f10"
           ]
         ]
       }
     },
     {
       "title": {
-        "static": "Next"
+        "static": "Debug"
       },
       "subtitle": {
-        "static": "Shows next step"
+        "static": "Debugs the current configuration"
       },
-      "background-color": {
-        "static": "#D14424"
+      "style": {
+        "background-color": "#3C3F41"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "simple-left-arrow_white.png"
+        "static": "WS-debug.png"
       },
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "right"
-          ]
-        ]
-      }
-    },
-    {
-      "title": {
-        "static": "Link"
-      },
-      "subtitle": {
-        "static": "Opens the first link in the slide"
-      },
-      "background-color": {
-        "static": "#B7472A"
-      },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "hyperlink_white.png"
-      },
-      "width": 2,
-      "height": 1,
-      "action": {
-        "sendKeyStroke": [
-          [
-            "tab"
-          ],
-          [
-            "enter"
+            "shift",
+            "f19"
           ]
         ]
       }
@@ -87,52 +60,156 @@
         "static": "Restart"
       },
       "subtitle": {
-        "static": "Restart the presentation to first slide"
+        "static": "Stops and runs again the current execution"
       },
-      "background-color": {
-        "static": "#B7472A"
+      "style": {
+        "background-color": "#3C3F41"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "restart_white.png"
+        "static": "WS-restart.png"
       },
-      "width": 2,
+      "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "1"
-          ],
-          [
-            "enter"
+            "control",
+            "f5"
           ]
         ]
       }
     },
     {
       "title": {
-        "static": "Exit"
+        "static": "Stop"
       },
       "subtitle": {
-        "static": "End the presentation"
+        "static": "Stops the current execution"
       },
-      "background-color": {
-        "static": "#B7472A"
+      "style": {
+        "background-color": "#3C3F41"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "cross_white.png"
+        "static": "WS-stop.png"
       },
-      "width": 2,
+      "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "escape"
+            "control",
+            "f2"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Resume"
+      },
+      "subtitle": {
+        "static": "Continues the paused execution"
+      },
+      "style": {
+        "background-color": "#3C3F41"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "WS-resume.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "f9"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Step Over"
+      },
+      "subtitle": {
+        "static": "Steps over the current instruction"
+      },
+      "style": {
+        "background-color": "#3C3F41"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "WS-stepover.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "f8"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Step Into"
+      },
+      "subtitle": {
+        "static": "Steps into the current instruction"
+      },
+      "style": {
+        "background-color": "#3C3F41"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "WS-stepin.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "f7"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Step Out"
+      },
+      "subtitle": {
+        "static": "Steps out of the current scope"
+      },
+      "style": {
+        "background-color": "#3C3F41"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "WS-stepout.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "shift",
+            "f8"
           ]
         ]
       }
