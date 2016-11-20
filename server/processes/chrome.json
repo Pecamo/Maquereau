@@ -8,8 +8,8 @@
       "subtitle": {
         "static": "Opens a new tab"
       },
-      "background-color": {
-        "static": "#347DC2"
+      "style": {
+          "background-color": "#347DC2"
       },
       "enable": {
         "static": true
@@ -35,8 +35,8 @@
       "subtitle": {
         "static": "Closes current tab"
       },
-      "background-color": {
-        "static": "#DF2025"
+      "style": {
+        "background-color": "#DF2025"
       },
       "enable": {
         "static": true
@@ -62,8 +62,8 @@
       "subtitle": {
         "static": "Reopens last closed tab"
       },
-      "background-color": {
-        "static": "#FCD207"
+      "style": {
+        "background-color": "#FCD207"
       },
       "enable": {
         "static": true
@@ -90,8 +90,8 @@
       "subtitle": {
         "static": "Switches between fullscreen and windowed mode"
       },
-      "background-color": {
-        "static": "#4BB847"
+      "style": {
+        "background-color": "#4BB847"
       },
       "enable": {
         "static": true
@@ -116,8 +116,8 @@
       "subtitle": {
         "static": "Shows the left tab"
       },
-      "background-color": {
-        "static": "#FFFFFF"
+      "style": {
+        "background-color": "#FFFFFF"
       },
       "enable": {
         "static": true
@@ -144,8 +144,8 @@
       "subtitle": {
         "static": "Shows the right tab"
       },
-      "background-color": {
-        "static": "#FFFFFF"
+      "style": {
+        "background-color": "#FFFFFF"
       },
       "enable": {
         "static": true
@@ -171,8 +171,8 @@
       "subtitle": {
         "static": "Open Google on the remote"
       },
-      "background-color": {
-        "static": "#FFFFFF"
+      "style": {
+        "background-color": "#FFFFFF"
       },
       "enable": {
         "static": true

@@ -8,8 +8,8 @@
       "subtitle": {
         "static": "Shows previous step"
       },
-      "background-color": {
-        "static": "#D14424"
+      "style": {
+        "background-color": "#D14424"
       },
       "enable": {
         "static": true
@@ -34,14 +34,14 @@
       "subtitle": {
         "static": "Shows next step"
       },
-      "background-color": {
-        "static": "#D14424"
+      "style": {
+        "background-color": "#D14424"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "simple-left-arrow_white.png"
+        "static": "simple-right-arrow_white.png"
       },
       "width": 1,
       "height": 1,
@@ -60,8 +60,8 @@
       "subtitle": {
         "static": "Opens the first link in the slide"
       },
-      "background-color": {
-        "static": "#B7472A"
+      "style": {
+        "background-color": "#B7472A"
       },
       "enable": {
         "static": true
@@ -89,8 +89,8 @@
       "subtitle": {
         "static": "Restart the presentation to first slide"
       },
-      "background-color": {
-        "static": "#B7472A"
+      "style": {
+        "background-color": "#B7472A"
       },
       "enable": {
         "static": true
@@ -118,8 +118,8 @@
       "subtitle": {
         "static": "End the presentation"
       },
-      "background-color": {
-        "static": "#B7472A"
+      "style": {
+        "background-color": "#B7472A"
       },
       "enable": {
         "static": true

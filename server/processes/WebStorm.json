@@ -8,8 +8,8 @@
       "subtitle": {
         "static": "Shows previous step"
       },
-      "background-color": {
-        "static": "#D14424"
+      "style": {
+        "background-color": "#D14424"
       },
       "enable": {
         "static": true
