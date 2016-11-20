@@ -11,6 +11,9 @@
   "dependencies": {
     "express": "^4.14.0",
     "express-ws": "^2.0.0",
-    "robotjs": "^0.4.5"
+    "open": "0.0.5",
+    "qr-image": "^3.1.0",
+    "robotjs": "^0.4.5",
+    "x-default-browser": "^0.3.1"
   }
 }
