@@ -57,7 +57,7 @@ function onPageLoad() {
 };
 
 function initWS() {
-	ws = new WebSocket(document.location.origin.replace(/^http/, "ws") + "/ws");
+	ws = new ReconnectingWebSocket(document.location.origin.replace(/^http/, "ws") + "/ws");
 
 	ws._send = ws.send;
 	ws.send = function (obj) {

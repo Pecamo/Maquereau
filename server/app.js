@@ -7,7 +7,6 @@ let fs = require('fs');
 let app = express();
 let router = express.Router();
 let ws = require('express-ws')(app);
-let wsChrome = require('express-ws')(app);
 
 let robot = require('robotjs');
 
@@ -38,20 +37,6 @@ let similarProcesses = {
 
 router.get('/', function (req, res) {
 	res.sendFile(__dirname + '/views/index.html');
-});
-
-router.ws('/ws-chrome', function (ws, req) {
-	ws.on('message', function (msg) {
-		msg = JSON.parse(msg);
-
-		if (!msg.error) {
-			switch (msg.type) {
-				case 'ping':
-					ws.send(JSON.stringify(msg));
-					break;
-			}
-		}
-	});
 });
 
 router.ws('/ws', function (ws, req) {
