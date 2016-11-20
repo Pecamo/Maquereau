@@ -4,7 +4,6 @@ let express = require('express');
 let path = require('path');
 let fs = require('fs');
 let os = require('os');
-let defaultBrowser = require('x-default-browser');
 
 let qr = require('qr-image');
 let open = require('open');
@@ -132,37 +131,33 @@ let server = app.listen(3000, () => {
 	console.log('Maquereau server listening at http://%s:%s.', host, port);
 
 	Object.keys(ifaces).forEach(function (ifname) {
-		defaultBrowser(function (err, res) {
-			let alias = 0;
-			let localIps = [];
-			ifaces[ifname].forEach(function (iface) {
-				if ('IPv4' !== iface.family || iface.internal !== false) {
-					// skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
-					return;
-				}
-				if (alias >= 1) {
-					// this single interface has multiple ipv4 addresses
-					console.log(ifname + ':' + alias, iface.address);
-					localIps.push(iface.address);
-				} else {
-					// this interface has only one ipv4 adress
-					console.log(ifname, iface.address);
-					localIps.push(iface.address);
-				}
-				++alias;
-			});
+		let alias = 0;
+		let localIps = [];
+		ifaces[ifname].forEach(function (iface) {
+			if ('IPv4' !== iface.family || iface.internal !== false) {
+				// skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
+				return;
+			}
+			if (alias >= 1) {
+				// this single interface has multiple ipv4 addresses
+				console.log(ifname + ':' + alias, iface.address);
+				localIps.push(iface.address);
+			} else {
+				// this interface has only one ipv4 adress
+				console.log(ifname, iface.address);
+				localIps.push(iface.address);
+			}
+			++alias;
+		});
 
-			let i = 0;
-			localIps.forEach(function (localIp) {
-				var qr_png = qr.image(localIp + ":" + port, { type: 'png' });
-				qr_png.pipe(fs.createWriteStream('scan_me_' + i + '.png'));
-				var svg_string = qr.imageSync('localIp + ":" + port', { type: 'png' });
+		let i = 0;
+		localIps.forEach(function (localIp) {
+			var qr_png = qr.image(localIp + ":" + port, { type: 'png' });
+			qr_png.pipe(fs.createWriteStream('scan_me_' + i + '.png'));
+			var svg_string = qr.imageSync('localIp + ":" + port', { type: 'png' });
+				open('file://' + __dirname + path.sep + 'scan_me_' + i + '.png', 'chromium');
 
-					console.log('Opening QR with ' + res.commonName)
-					open('file://' + __dirname + path.sep + 'scan_me_' + i + '.png', res.commonName);
-
-				i++
-			});
+			i++
 		});
 	});
 });
