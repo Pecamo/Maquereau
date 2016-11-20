@@ -3,6 +3,7 @@ var ws;
 var vm = new Vue({
 	el: '#container',
 	data: {
+		currentProcess: "",
 		tiles: [
 			{
 				"title":{
@@ -75,6 +76,7 @@ function initWS() {
 			case 'process-changed':
 				// TODO put layouts in cache and try to recover them
 				queryLayout(message.data.name);
+				vm.currentProcess = message.data.name;
 				break;
 			case 'layout':
 				vm.tiles = message.data.tiles;
