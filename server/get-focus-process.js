@@ -21,11 +21,11 @@ function getFocusProcess (cb) {
 			var found = data.match(regexPattern);
 			if (found) {
 				if (rnRecieved >= 3) {
-					console.log(found[1].trim());
+					// console.log(found[1].trim());
 					cb(found[1].trim());
 					rnRecieved = 0;
 				} else {
-					console.log("Preventing too many applications switches.");
+					// console.log("Preventing too many applications switches.");
 					rnRecieved = 0;
 				}
 			}
