@@ -16,7 +16,7 @@
 
 		<script src="script/main.js" defer></script>
 
-		<div id="container">
+		<div id="container" v-bind:class="{ disconnected: !connected }">
 			<h1>Maquereau &middot; <span class="capitalize">{{ currentProcess }}</span></h1>
 			<div class="tiles">
 				<div class="tile"

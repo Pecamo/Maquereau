@@ -3,7 +3,8 @@ var ws;
 var vm = new Vue({
 	el: '#container',
 	data: {
-		currentProcess: "",
+		connected: false,
+		currentProcess: "Connecting...",
 		tiles: [
 			{
 				"title":{
@@ -63,6 +64,7 @@ function initWS() {
 	}
 
 	ws.onopen = function (event) {
+		vm.connected = true;
 		ws.send({ type: 'hello', data: {} });
 	}
 
@@ -89,6 +91,8 @@ function initWS() {
 
 	ws.onclose = function (event) {
 		console.warn("WebSocket closed:", event);
+		vm.connected = false;
+		vm.currentProcess = "Disconnected";
 	}
 
 	ws.onerror = function (event) {
