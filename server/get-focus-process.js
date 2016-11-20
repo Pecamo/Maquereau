@@ -2,7 +2,14 @@
 
 const exec = require('child_process').exec;
 
-const regexPattern = new RegExp(/(?:[\d\.]+\s+){7}((?:\s?\w+)+)/);
+const regexPattern = new RegExp(/(?:[\d\.]+\s+){6,7}((?:\s?\w+)+)/);
+
+function countOcurrences(str, value) {
+	var regExp = new RegExp(value, "gi");
+	return (str.match(regExp) || []).length;
+}
+
+var rnRecieved = 3;
 
 function getFocusProcess (cb) {
 	if (process.platform.toLowerCase().includes('win')) {
@@ -10,10 +17,17 @@ function getFocusProcess (cb) {
 		let proc = exec(command);
 
 		proc.stdout.on('data', (data) => {
+			rnRecieved += countOcurrences(data, "\r\n");
 			var found = data.match(regexPattern);
 			if (found) {
-				console.log(found[1].trim());
-				cb(found[1].trim());
+				if (rnRecieved >= 3) {
+					console.log(found[1].trim());
+					cb(found[1].trim());
+					rnRecieved = 0;
+				} else {
+					console.log("Preventing too many applications switches.");
+					rnRecieved = 0;
+				}
 			}
 		});
 

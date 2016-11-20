@@ -3,19 +3,19 @@
   [
     {
       "title": {
-        "static": "New"
+        "static": "Preferences"
       },
       "subtitle": {
-        "static": "Opens a new tab"
+        "static": "Opens the preferences"
       },
       "style": {
-          "background-color": "#347DC2"
+          "background-color": "#D0D2E8"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "new-tab_white.png"
+        "static": "preferences.png"
       },
       "width": 1,
       "height": 1,
@@ -23,54 +23,26 @@
         "sendKeyStroke": [
           [
             "control",
-            "t"
+            ","
           ]
         ]
       }
     },
     {
       "title": {
-        "static": "Close"
+        "static": "Starred"
       },
       "subtitle": {
-        "static": "Closes current tab"
+        "static": "Opens messages you starred"
       },
       "style": {
-        "background-color": "#DF2025"
+        "background-color": "#EFEFD7"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "close-tab_white.png"
-      },
-      "width": 1,
-      "height": 1,
-      "action": {
-        "sendKeyStroke": [
-          [
-            "control",
-            "w"
-          ]
-        ]
-      }
-    },
-    {
-      "title": {
-        "static": "Reopen"
-      },
-      "subtitle": {
-        "static": "Reopens last closed tab"
-      },
-      "style": {
-        "background-color": "#FCD207",
-        "color": "#000000"
-      },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "back-arrows.png"
+        "static": "star.png"
       },
       "width": 1,
       "height": 1,
@@ -79,46 +51,76 @@
           [
             "control",
             "shift",
-            "t"
+            "s"
           ]
         ]
       }
     },
     {
       "title": {
-        "static": "Fullscreen"
+        "static": "FullScreen"
       },
       "subtitle": {
-        "static": "Switches between fullscreen and windowed mode"
+        "static": "Toggles FullScreen mode"
       },
       "style": {
-        "background-color": "#4BB847"
+        "background-color": "#D0D2E8"
       },
       "enable": {
         "static": true
       },
       "icon": {
-        "static": "fullscreen_white.png"
+        "static": "fullscreen.png"
       },
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "f11"
+            "control",
+            "shift",
+            "f"
           ]
         ]
       }
     },
     {
       "title": {
-        "static": "Left Tab"
+        "static": "Unread"
       },
       "subtitle": {
-        "static": "Shows the left tab"
+        "static": "Shows unread messages"
       },
       "style": {
-        "background-color": "#FFFFFF"
+        "background-color": "#D9EDD5"
+      },
+      "enable": {
+        "static": true
+      },
+      "icon": {
+        "static": "exclamation-warning-sign.png"
+      },
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "a"
+          ]
+        ]
+      }
+    },
+    {
+      "title": {
+        "static": "Previous"
+      },
+      "subtitle": {
+        "static": "Shows previous channel"
+      },
+      "style": {
+        "background-color": "#EAEAEA"
       },
       "enable": {
         "static": true
@@ -140,13 +142,13 @@
     },
     {
       "title": {
-        "static": "Right Tab"
+        "static": "Next"
       },
       "subtitle": {
-        "static": "Shows the right tab"
+        "static": "Shows next channel"
       },
       "style": {
-        "background-color": "#FFFFFF"
+        "background-color": "#EAEAEA"
       },
       "enable": {
         "static": true
@@ -162,41 +164,6 @@
             "control",
             "tab"
           ]
-        ]
-      }
-    },
-    {
-      "title": {
-        "static": "Google"
-      },
-      "subtitle": {
-        "static": "Open Google on the remote"
-      },
-      "style": {
-        "background-color": "#FFFFFF"
-      },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "google_logo.png"
-      },
-      "width": 2,
-      "height": 1,
-      "action": {
-        "sendKeyStroke": [
-          ["control", "l"],
-          "g",
-          "o",
-          "o",
-          "g",
-          "l",
-          "e",
-          ".",
-          "c",
-          "o",
-          "m",
-          "enter"
         ]
       }
     }

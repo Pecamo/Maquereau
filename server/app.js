@@ -18,6 +18,16 @@ let titleOf = {
 	"POWERPNT" : "PowerPoint"
 };
 
+function styleOf(name) {
+	var fileName = __dirname + '/styles/' + name + '.json';
+	if (fs.existsSync(fileName)) {
+		let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
+		return fileContent;
+	} else {
+		return {};
+	}
+}
+
 app.use(router);
 app.use(express.static('views/static'));
 
@@ -44,7 +54,8 @@ router.ws('/ws', function (ws, req) {
 						type: "process-changed",
 						data: {
 							name: currentProcess,
-							title: titleOf[currentProcess]
+							title: titleOf[currentProcess],
+							style: styleOf(currentProcess)
 						}
 					}));
 					break;
@@ -94,7 +105,8 @@ function processWatcher() {
 						type: "process-changed",
 						data: {
 							name: process,
-							title: titleOf[process]
+							title: titleOf[process],
+							style: styleOf(process)
 						}
 					}));
 				}
