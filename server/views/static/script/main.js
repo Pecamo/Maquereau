@@ -5,6 +5,7 @@ var vm = new Vue({
 	data: {
 		connected: false,
 		currentProcess: "Connecting...",
+		containerStyle: {},
 		tiles: [
 			{
 				"title":{
@@ -78,11 +79,19 @@ function initWS() {
 			case 'process-changed':
 				// TODO put layouts in cache and try to recover them
 				queryLayout(message.data.name);
+
 				if (message.data.title) {
 					vm.currentProcess = message.data.title;
 				} else {
 					vm.currentProcess = message.data.name;
 				}
+
+				console.log(message.data)
+
+				if (message.data.style) {
+					vm.containerStyle = message.data.style;
+				}
+
 				break;
 			case 'layout':
 				vm.tiles = message.data.tiles;
