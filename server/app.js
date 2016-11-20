@@ -140,26 +140,27 @@ let server = app.listen(3000, () => {
 			}
 			if (alias >= 1) {
 				// this single interface has multiple ipv4 addresses
-				console.log(ifname + ':' + alias, iface.address);
+				console.log(ifname + ':' + alias, iface.address + ":" + port);
 				localIps.push(iface.address);
 			} else {
 				// this interface has only one ipv4 adress
-				console.log(ifname, iface.address);
+				console.log(ifname, iface.address + ":" + port);
 				localIps.push(iface.address);
 			}
 			++alias;
 		});
 
 		let i = 0;
+		var qr_png;
+		var svg_string;
 		localIps.forEach(function (localIp) {
-			var qr_png = qr.image(localIp + ":" + port, { type: 'png' });
+			qr_png = qr.image(localIp + ":" + port, { type: 'png' });
 			qr_png.pipe(fs.createWriteStream('scan_me_' + i + '.png'));
-			var svg_string = qr.imageSync('localIp + ":" + port', { type: 'png' });
-				open('file://' + __dirname + path.sep + 'scan_me_' + i + '.png', 'chromium');
-
+			svg_string = qr.imageSync('localIp + ":" + port', { type: 'png' });
 			i++
 		});
 	});
+	open('file://' + __dirname + path.sep + 'scan_me_' + 0 + '.png', 'chrome');
 });
 
 module.exports = app;
