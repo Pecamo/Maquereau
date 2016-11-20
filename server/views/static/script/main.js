@@ -98,8 +98,6 @@ function initWS() {
 
 				if (message.data.title) {
 					vm.currentProcess = message.data.title;
-				} else {
-					vm.currentProcess = message.data.name;
 				}
 
 				console.log(message.data)
