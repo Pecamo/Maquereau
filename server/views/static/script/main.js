@@ -3,7 +3,8 @@ var ws;
 var vm = new Vue({
 	el: '#container',
 	data: {
-		currentProcess: "",
+		connected: false,
+		currentProcess: "Connecting...",
 		tiles: [
 			{
 				"title":{
@@ -63,6 +64,7 @@ function initWS() {
 	}
 
 	ws.onopen = function (event) {
+		vm.connected = true;
 		ws.send({ type: 'hello', data: {} });
 	}
 
@@ -76,7 +78,11 @@ function initWS() {
 			case 'process-changed':
 				// TODO put layouts in cache and try to recover them
 				queryLayout(message.data.name);
-				vm.currentProcess = message.data.name;
+				if (message.data.title) {
+					vm.currentProcess = message.data.title;
+				} else {
+					vm.currentProcess = message.data.name;
+				}
 				break;
 			case 'layout':
 				vm.tiles = message.data.tiles;
@@ -89,6 +95,8 @@ function initWS() {
 
 	ws.onclose = function (event) {
 		console.warn("WebSocket closed:", event);
+		vm.connected = false;
+		vm.currentProcess = "Disconnected";
 	}
 
 	ws.onerror = function (event) {
