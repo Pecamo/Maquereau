@@ -17,9 +17,13 @@
 		<script src="script/main.js" defer></script>
 
 		<div id="container">
-			<h1>Maquereau</h1>
+			<h1>Maquereau &middot; <span class="capitalize">{{ currentProcess }}</span></h1>
 			<div class="tiles">
-				<div class="tile" v-for="tile in tiles" v-bind:style="{ backgroundImage: 'url(\'/img/icons/' + tile.icon.static + '\')' }" v-bind:data-keystroke="tile.action.sendKeyStroke">
+				<div class="tile"
+					v-for="tile in tiles"
+					v-bind:style="[{ backgroundImage: 'url(\'/img/icons/' + tile.icon.static + '\')' }, tile.style]"
+					v-bind:data-keystroke="tile.action.sendKeyStroke"
+					v-on:click="onTileClicked(tile.action, $event)">
 					<h3 class="title">{{ tile.title.static }}</h3>
 					<p class="subtitle">{{ tile.subtitle.static }}</p>
 				</div>
