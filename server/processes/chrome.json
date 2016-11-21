@@ -2,21 +2,12 @@
   "tiles":
   [
     {
-      "title": {
-        "static": "New"
-      },
-      "subtitle": {
-        "static": "Opens a new tab"
-      },
+      "title": "New",
+      "subtitle": "Opens a new tab",
       "style": {
           "background-color": "#347DC2"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "new-tab_white.png"
-      },
+      "icon": "new-tab_white.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -29,21 +20,12 @@
       }
     },
     {
-      "title": {
-        "static": "Close"
-      },
-      "subtitle": {
-        "static": "Closes current tab"
-      },
+      "title": "Close",
+      "subtitle": "Closes current tab",
       "style": {
         "background-color": "#DF2025"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "close-tab_white.png"
-      },
+      "icon": "close-tab_white.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -56,22 +38,13 @@
       }
     },
     {
-      "title": {
-        "static": "Reopen"
-      },
-      "subtitle": {
-        "static": "Reopens last closed tab"
-      },
+      "title": "Reopen",
+      "subtitle": "Reopens last closed tab",
       "style": {
         "background-color": "#FCD207",
         "color": "#000000"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "back-arrows.png"
-      },
+      "icon": "back-arrows.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -85,21 +58,12 @@
       }
     },
     {
-      "title": {
-        "static": "Fullscreen"
-      },
-      "subtitle": {
-        "static": "Switches between fullscreen and windowed mode"
-      },
+      "title": "Fullscreen",
+      "subtitle": "Switches between fullscreen and windowed mode",
       "style": {
         "background-color": "#4BB847"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "fullscreen_white.png"
-      },
+      "icon": "fullscreen_white.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -111,21 +75,12 @@
       }
     },
     {
-      "title": {
-        "static": "Left Tab"
-      },
-      "subtitle": {
-        "static": "Shows the left tab"
-      },
+      "title": "Left Tab",
+      "subtitle": "Shows the left tab",
       "style": {
         "background-color": "#FFFFFF"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "simple-left-arrow.png"
-      },
+      "icon": "simple-left-arrow.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -139,21 +94,12 @@
       }
     },
     {
-      "title": {
-        "static": "Right Tab"
-      },
-      "subtitle": {
-        "static": "Shows the right tab"
-      },
+      "title": "Right Tab",
+      "subtitle": "Shows the right tab",
       "style": {
         "background-color": "#FFFFFF"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "simple-right-arrow.png"
-      },
+      "icon": "simple-right-arrow.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -166,21 +112,12 @@
       }
     },
     {
-      "title": {
-        "static": "Google"
-      },
-      "subtitle": {
-        "static": "Open Google on the remote"
-      },
+      "title": "Google",
+      "subtitle": "Open Google on the remote",
       "style": {
         "background-color": "#FFFFFF"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "google_logo.png"
-      },
+      "icon": "google_logo.png",
       "width": 2,
       "height": 1,
       "action": {

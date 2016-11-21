@@ -2,158 +2,92 @@
   "tiles":
   [
     {
-      "title": {
-        "static": "Play/Pause"
-      },
-      "subtitle": {
-        "static": "Play or pause the music"
-      },
+      "title": "Play/Pause",
+      "subtitle": "Play or pause the music",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "play.png"
-      },
+      "icon": "play.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "space"
-          ]
+          "space"
         ]
       }
     },
     {
-      "title": {
-        "static": "Mute"
-      },
-      "subtitle": {
-        "static": "Mute the music"
-      },
+      "title": "Mute",
+      "subtitle": "Mute the music",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "mute.png"
-      },
+      "icon": "mute.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "audio_mute"
-          ]
+          "audio_mute"
         ]
       }
     },
     {
-      "title": {
-        "static": "Vol --"
-      },
-      "subtitle": {
-        "static": "Decrease the volume"
-      },
+      "title": "Vol --",
+      "subtitle": "Decrease the volume",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "volume-down.png"
-      },
+      "icon": "volume-down.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "audio_vol_down"
-          ]
+          "audio_vol_down"
         ]
       }
     },
     {
-      "title": {
-        "static": "Vol ++"
-      },
-      "subtitle": {
-        "static": "Louder !"
-      },
+      "title": "Vol ++",
+      "subtitle": "Louder !",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "volume-up.png"
-      },
+      "icon": "volume-up.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "audio_vol_up"
-          ]
+          "audio_vol_up"
         ]
       }
     },
     {
-      "title": {
-        "static": "Previous song"
-      },
-      "subtitle": {
-        "static": "Go back to previous song"
-      },
+      "title": "Previous song",
+      "subtitle": "Go back to previous song",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "rewind.png"
-      },
+      "icon": "rewind.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "audio_prev"
-          ]
+          "audio_prev"
         ]
       }
     },
     {
-      "title": {
-        "static": "Next song"
-      },
-      "subtitle": {
-        "static": "Play next song"
-      },
+      "title": "Next song",
+      "subtitle": "Play next song",
       "style": {
         "background-color": "#1ED760"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "fastforward.png"
-      },
+      "icon": "fastforward.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "audio_next"
-          ]
+          "audio_next"
         ]
       }
     }

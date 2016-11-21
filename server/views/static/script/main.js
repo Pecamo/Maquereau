@@ -8,21 +8,12 @@ var vm = new Vue({
 		containerStyle: {},
 		tiles: [
 			{
-				"title":{
-					"static":"New"
-				},
-				"subtitle":{
-					"static":"Opens a new tab"
-				},
+				"title":"New",
+				"subtitle":"Opens a new tab",
 				"background-color":{
 					"static":"#00FF00"
 				},
-				"enable":{
-					"static":true
-				},
-				"icon":{
-					"static":"new-tab.png"
-				},
+				"icon":"new-tab.png",
 				"width":2,
 				"height":1,
 				"action":{

@@ -2,21 +2,12 @@
   "tiles":
   [
     {
-      "title": {
-        "static": "Run"
-      },
-      "subtitle": {
-        "static": "Runs the current configuration"
-      },
+      "title": "Run",
+      "subtitle": "Runs the current configuration",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-play.png"
-      },
+      "icon": "WS-play.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -29,21 +20,12 @@
       }
     },
     {
-      "title": {
-        "static": "Debug"
-      },
-      "subtitle": {
-        "static": "Debugs the current configuration"
-      },
+      "title": "Debug",
+      "subtitle": "Debugs the current configuration",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-debug.png"
-      },
+      "icon": "WS-debug.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -56,21 +38,12 @@
       }
     },
     {
-      "title": {
-        "static": "Restart"
-      },
-      "subtitle": {
-        "static": "Stops and runs again the current execution"
-      },
+      "title": "Restart",
+      "subtitle": "Stops and runs again the current execution",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-restart.png"
-      },
+      "icon": "WS-restart.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -83,21 +56,12 @@
       }
     },
     {
-      "title": {
-        "static": "Stop"
-      },
-      "subtitle": {
-        "static": "Stops the current execution"
-      },
+      "title": "Stop",
+      "subtitle": "Stops the current execution",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-stop.png"
-      },
+      "icon": "WS-stop.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -110,99 +74,57 @@
       }
     },
     {
-      "title": {
-        "static": "Resume"
-      },
-      "subtitle": {
-        "static": "Continues the paused execution"
-      },
+      "title": "Resume",
+      "subtitle": "Continues the paused execution",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-resume.png"
-      },
+      "icon": "WS-resume.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "f9"
-          ]
+          "f9"
         ]
       }
     },
     {
-      "title": {
-        "static": "Step Over"
-      },
-      "subtitle": {
-        "static": "Steps over the current instruction"
-      },
+      "title": "Step Over",
+      "subtitle": "Steps over the current instruction",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-stepover.png"
-      },
+      "icon": "WS-stepover.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "f8"
-          ]
+          "f8"
         ]
       }
     },
     {
-      "title": {
-        "static": "Step Into"
-      },
-      "subtitle": {
-        "static": "Steps into the current instruction"
-      },
+      "title": "Step Into",
+      "subtitle": "Steps into the current instruction",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-stepin.png"
-      },
+      "icon": "WS-stepin.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
-          [
-            "f7"
-          ]
+          "f7"
         ]
       }
     },
     {
-      "title": {
-        "static": "Step Out"
-      },
-      "subtitle": {
-        "static": "Steps out of the current scope"
-      },
+      "title": "Step Out",
+      "subtitle": "Steps out of the current scope",
       "style": {
         "background-color": "#3C3F41"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "WS-stepout.png"
-      },
+      "icon": "WS-stepout.png",
       "width": 1,
       "height": 1,
       "action": {

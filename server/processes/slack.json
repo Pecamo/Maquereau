@@ -2,21 +2,12 @@
   "tiles":
   [
     {
-      "title": {
-        "static": "Preferences"
-      },
-      "subtitle": {
-        "static": "Opens the preferences"
-      },
+      "title": "Preferences",
+      "subtitle": "Opens the preferences",
       "style": {
           "background-color": "#D0D2E8"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "preferences.png"
-      },
+      "icon": "preferences.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -29,21 +20,12 @@
       }
     },
     {
-      "title": {
-        "static": "Starred"
-      },
-      "subtitle": {
-        "static": "Opens messages you starred"
-      },
+      "title": "Starred",
+      "subtitle": "Opens messages you starred",
       "style": {
         "background-color": "#EFEFD7"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "star.png"
-      },
+      "icon": "star.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -57,21 +39,12 @@
       }
     },
     {
-      "title": {
-        "static": "FullScreen"
-      },
-      "subtitle": {
-        "static": "Toggles FullScreen mode"
-      },
+      "title": "FullScreen",
+      "subtitle": "Toggles FullScreen mode",
       "style": {
         "background-color": "#D0D2E8"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "fullscreen.png"
-      },
+      "icon": "fullscreen.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -85,21 +58,12 @@
       }
     },
     {
-      "title": {
-        "static": "Unread"
-      },
-      "subtitle": {
-        "static": "Shows unread messages"
-      },
+      "title": "Unread",
+      "subtitle": "Shows unread messages",
       "style": {
         "background-color": "#D9EDD5"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "exclamation-warning-sign.png"
-      },
+      "icon": "exclamation-warning-sign.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -113,21 +77,12 @@
       }
     },
     {
-      "title": {
-        "static": "Previous"
-      },
-      "subtitle": {
-        "static": "Shows previous channel"
-      },
+      "title": "Previous",
+      "subtitle": "Shows previous channel",
       "style": {
         "background-color": "#EAEAEA"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "simple-left-arrow.png"
-      },
+      "icon": "simple-left-arrow.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -141,21 +96,12 @@
       }
     },
     {
-      "title": {
-        "static": "Next"
-      },
-      "subtitle": {
-        "static": "Shows next channel"
-      },
+      "title": "Next",
+      "subtitle": "Shows next channel",
       "style": {
         "background-color": "#EAEAEA"
       },
-      "enable": {
-        "static": true
-      },
-      "icon": {
-        "static": "simple-right-arrow.png"
-      },
+      "icon": "simple-right-arrow.png",
       "width": 1,
       "height": 1,
       "action": {
