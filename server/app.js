@@ -105,28 +105,30 @@ router.ws('/ws', function (ws, req) {
 });
 
 let currentProcess = "";
-function processWatcher() {
-	setInterval(function () {
-		getFocusProcess(function (process) {
-			if (currentProcess !== process) {
-				currentProcess = process;
+const timeInterval = 500;
 
-				for (let client of ws.getWss().clients) {
-					client.send(JSON.stringify({
-						type: "process-changed",
-						data: {
-							name: process,
-							title: titleOf[process],
-							style: styleOf(process)
-						}
-					}));
-				}
+function processWatcher() {
+	getFocusProcess(function (process) {
+		if (currentProcess !== process) {
+			currentProcess = process;
+
+			for (let client of ws.getWss().clients) {
+				client.send(JSON.stringify({
+					type: "process-changed",
+					data: {
+						name: process,
+						title: titleOf[process],
+						style: styleOf(process)
+					}
+				}));
 			}
-		})
-	}, 500);
+		}
+
+		setTimeout(processWatcher, timeInterval);
+	});
 }
 
-processWatcher();
+setTimeout(processWatcher, timeInterval);
 
 // Start the server on port 3000.
 let server = app.listen(3000, () => {
