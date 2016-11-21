@@ -21,7 +21,8 @@ let titleOf = {
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
-	"slack" : "Slack"
+	"slack" : "Slack",
+	"spotify" : "Spotify"
 };
 
 function styleOf(name) {
