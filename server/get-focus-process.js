@@ -13,7 +13,7 @@ var rnRecieved = 3;
 
 function getFocusProcess (cb) {
 	if (process.platform.toLowerCase().includes('win')) {
-		let command = 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\powershell.exe . "./windowsproc.ps1";';
+		let command = 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -File "windowsproc.ps1"';
 		let proc = exec(command);
 
 		proc.stdout.on('data', (data) => {
