@@ -22,7 +22,9 @@ let titleOf = {
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
 	"slack" : "Slack",
-	"spotify" : "Spotify"
+	"spotify" : "Spotify",
+    "WebStorm" : "WebStorm",
+    "PyCharm" : "PyCharm"
 };
 
 function styleOf(name) {
@@ -39,7 +41,9 @@ app.use(router);
 app.use(express.static('views/static'));
 
 let similarProcesses = {
-	"chromium": "chrome"
+	"chromium": "chrome",
+    "PyCharm": "WebStorm",
+    "idea": "WebStorm"
 };
 
 router.get('/', function (req, res) {
