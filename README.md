@@ -1,4 +1,4 @@
-# Maquereau
+# ![Maquereau logo](maquereau.png) Maquereau
 **Maquereau** is a tool to let you use your phone as a remote control for multiple applications opened on your desktop. Use your smartphone as a keyboard extension !
 
 ## Installation
@@ -29,6 +29,10 @@ The following programs will display buttons for the following applications :
 - PowerPoint
 - Slack
 - WebStorm
+
+## Troubleshooting
+
+Depending on your OS and configuration, you might need to have [Python 2](https://www.python.org/) installed before running `npm install`.
 
 ## License
 
