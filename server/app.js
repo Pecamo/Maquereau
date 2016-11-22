@@ -52,6 +52,8 @@ let similarProcesses = {
     "idea": "WebStorm"
 };
 
+let useOSX = process.platform.toLowerCase().includes('darwin');
+
 router.get('/', function (req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 });
@@ -72,7 +74,8 @@ router.ws('/ws', function (ws, req) {
 						data: {
 							name: currentProcess,
 							title: titleOf[currentProcess],
-							style: styleOf(currentProcess)
+							style: styleOf(currentProcess),
+							useOSX: useOSX
 						}
 					}));
 					break;
@@ -125,7 +128,8 @@ function processWatcher() {
 					data: {
 						name: process,
 						title: titleOf[process],
-						style: styleOf(process)
+						style: styleOf(process),
+						useOSX: useOSX
 					}
 				}));
 			}
