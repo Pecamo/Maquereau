@@ -27,7 +27,8 @@ let titleOf = {
 	"spotify" : "Spotify",
     "WebStorm" : "WebStorm",
     "PyCharm" : "PyCharm",
-	"Unity" : "Unity"
+	"Unity" : "Unity",
+	"Discord" : "Discord"
 };
 
 function styleOf(name) {
