@@ -2,12 +2,49 @@
   "tiles":
   [
     {
+      "title": "Left Tab",
+      "subtitle": "Shows the left tab",
+      "style": {
+        "background-color": "#000000"
+      },
+      "icon": "tab-left_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "tab"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Right Tab",
+      "subtitle": "Shows the right tab",
+      "style": {
+        "background-color": "#000000"
+      },
+      "icon": "tab-right_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "tab"
+          ]
+        ]
+      }
+    },
+    {
       "title": "New",
       "subtitle": "Opens a new tab",
       "style": {
           "background-color": "#347DC2"
       },
-      "icon": "new-tab_white.png",
+      "icon": "tab-new_white.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -25,7 +62,7 @@
       "style": {
         "background-color": "#DF2025"
       },
-      "icon": "close-tab_white.png",
+      "icon": "tab-close_white.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -44,7 +81,7 @@
         "background-color": "#FCD207",
         "color": "#000000"
       },
-      "icon": "back-arrows.png",
+      "icon": "tab-reopen.png",
       "width": 1,
       "height": 1,
       "action": {
@@ -75,65 +112,40 @@
       }
     },
     {
-      "title": "Left Tab",
-      "subtitle": "Shows the left tab",
+      "title": "Previous",
+      "subtitle": "Return to previous page",
       "style": {
-        "background-color": "#FFFFFF"
+        "background-color": "#FFFFFF",
+        "color": "#000000"
       },
-      "icon": "simple-left-arrow.png",
+      "icon": "arrow-left.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "control",
-            "shift",
-            "tab"
+            "alt",
+            "left"
           ]
         ]
       }
     },
     {
-      "title": "Right Tab",
-      "subtitle": "Shows the right tab",
+      "title": "Next",
+      "subtitle": "Goes to next page again",
       "style": {
-        "background-color": "#FFFFFF"
+        "background-color": "#FFFFFF",
+        "color": "#000000"
       },
-      "icon": "simple-right-arrow.png",
+      "icon": "arrow-right.png",
       "width": 1,
       "height": 1,
       "action": {
         "sendKeyStroke": [
           [
-            "control",
-            "tab"
+            "alt",
+            "right"
           ]
-        ]
-      }
-    },
-    {
-      "title": "Google",
-      "subtitle": "Open Google on the remote",
-      "style": {
-        "background-color": "#FFFFFF"
-      },
-      "icon": "google_logo.png",
-      "width": 2,
-      "height": 1,
-      "action": {
-        "sendKeyStroke": [
-          ["control", "l"],
-          "g",
-          "o",
-          "o",
-          "g",
-          "l",
-          "e",
-          ".",
-          "c",
-          "o",
-          "m",
-          "enter"
         ]
       }
     }
