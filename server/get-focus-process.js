@@ -2,20 +2,25 @@
 
 const exec = require('child_process').exec;
 const spawn = require('child_process').spawn;
-const readline = require('readline');
-
-let osascript = require('node-osascript');
 
 const regexPattern = new RegExp(/(?:[\d\.]+\s+){6,7}((?:\s?\w+)+)/);
 
 function getFocusProcess (cb) {
+	// OS X
 	if (process.platform.toLowerCase().includes('darwin')) {
-		var pid;
-		osascript.execute('tell application "System Events" \n name of first application process whose frontmost is true \n end tell',function(err, result, raw){
- 		if (err) return console.error(err)
-  		cb((result.trim() + " OSX"));
+		let proc = exec('osascript osxproc.scpt');
+		proc.stdout.on('data', (data) => {
+			cb(data.trim());
 		});
 
+		proc.stderr.on('data', (data) => {
+			console.log(`stderr: ${data}`);
+		});
+
+		proc.on('close', (code) => {
+		});
+
+	// Windows
 	} else if (process.platform.toLowerCase().includes('win')) {
 		let child = spawn("powershell.exe",["-ExecutionPolicy", "ByPass", "-File", "windowsproc.ps1"]);
 		child.stdout.on("data",function(data){
@@ -35,6 +40,7 @@ function getFocusProcess (cb) {
 
 		child.stdin.end();
 
+	// Linux
 	} else if (process.platform.toLowerCase().includes('linux')) {
 		let proc = exec('ps -p $(xdotool getactivewindow getwindowpid) -o comm=');
 

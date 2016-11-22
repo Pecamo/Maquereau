@@ -20,7 +20,7 @@ let out = process.stdout;
 let getFocusProcess = require('./get-focus-process');
 
 let titleOf = {
-	"Google Chrome OSX" : "Google Chrome",
+	"Google Chrome" : "Google Chrome",
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
@@ -46,7 +46,7 @@ app.use(router);
 app.use(express.static('views/static'));
 
 let similarProcesses = {
-	"Google Chrome OSX" : "chrome",
+	"Google Chrome" : "chrome",
 	"chromium": "chrome",
     "PyCharm": "WebStorm",
     "idea": "WebStorm"
