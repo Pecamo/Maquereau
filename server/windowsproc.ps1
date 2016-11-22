@@ -7,6 +7,7 @@ Add-Type @"
 }
 "@
 
-$a = [tricks]::GetForegroundWindow()
-
-get-process | ? { $_.mainwindowhandle -eq $a }
+While ($true) {
+    get-process | ? { $_.mainwindowhandle -eq [tricks]::GetForegroundWindow() } | select-object -first 1
+    Start-Sleep -m 300
+}
