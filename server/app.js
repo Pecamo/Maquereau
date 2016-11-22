@@ -15,6 +15,8 @@ let ifaces = os.networkInterfaces();
 
 let robot = require('robotjs');
 
+let out = process.stdout;
+
 let getFocusProcess = require('./get-focus-process');
 
 let titleOf = {
@@ -124,6 +126,9 @@ function processWatcher() {
 				}));
 			}
 		}
+        out.clearLine();
+        out.cursorTo(0);
+        out.write("Current process : " + process);
         if (!isWindows) {
             setTimeout(processWatcher, timeInterval);
         }
