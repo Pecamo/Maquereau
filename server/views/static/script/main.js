@@ -8,18 +8,17 @@ var vm = new Vue({
 		containerStyle: {},
 		tiles: [
 			{
-				"title":"New",
-				"subtitle":"Opens a new tab",
+				"title":"Connecting",
+				"subtitle":"Please wait while the device is connecting to your desktop...",
 				"background-color":{
 					"static":"#00FF00"
 				},
 				"icon":"new-tab.png",
-				"width":2,
+				"width":1,
 				"height":1,
 				"action":{
 					"sendKeyStroke":[
-						"Ctrl",
-						"T"
+
 					]
 				}
 			}

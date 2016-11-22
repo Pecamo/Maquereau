@@ -1,0 +1,61 @@
+{
+  "tiles":
+  [
+    {
+      "title": "Play",
+      "subtitle": "Plays the selected Scene",
+      "style": {
+          "background-color": "#DDDCDD"
+      },
+      "icon": "Unity-play.png",
+      "width": 2,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "p"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Pause",
+      "subtitle": "Pauses the current execution",
+      "style": {
+        "background-color": "#DDDCDD"
+      },
+      "icon": "Unity-pause.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "p"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Step",
+      "subtitle": "Advances one frame",
+      "style": {
+        "background-color": "#DDDCDD"
+      },
+      "icon": "Unity-step.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "alt",
+            "p"
+          ]
+        ]
+      }
+    }
+  ]
+}
