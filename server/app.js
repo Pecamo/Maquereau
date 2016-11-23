@@ -23,13 +23,6 @@ let titleOf = {
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
-	"slack" : "Slack",
-	"spotify" : "Spotify",
-	"WebStorm" : "WebStorm",
-	"PyCharm" : "PyCharm",
-	"Unity" : "Unity",
-	"Discord" : "Discord",
-	"terminator": "terminator"
 };
 
 function styleOf(name) {
@@ -66,11 +59,13 @@ router.ws('/ws', function (ws, req) {
 					ws.send(JSON.stringify(msg));
 					break;
 				case 'hello':
+					let title = (typeof titleOf[currentProcess] !== 'undefined') ? titleOf[currentProcess] : currentProcess;
+
 					ws.send(JSON.stringify({
 						type: "process-changed",
 						data: {
 							name: currentProcess,
-							title: titleOf[currentProcess],
+							title: title,
 							style: styleOf(currentProcess)
 						}
 					}));
@@ -123,12 +118,14 @@ function processWatcher() {
 		if (currentProcess !== process) {
 			currentProcess = process;
 
+			let title = (typeof titleOf[process] !== 'undefined') ? titleOf[process] : process;
+
 			for (let client of ws.getWss().clients) {
 				client.send(JSON.stringify({
 					type: "process-changed",
 					data: {
 						name: process,
-						title: titleOf[process],
+						title: title,
 						style: styleOf(process)
 					}
 				}));
