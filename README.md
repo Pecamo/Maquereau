@@ -10,13 +10,13 @@
 
 - Run the server on your desktop using `node app.js`. The IP address of your desktop is displayed.
 - With your smartphone or another device, navigate to the displayed addres at the port `:3000`.
-- Use the buttons on your smartphone's screen ! The server detects your active application, and the smartphone displays relevant buttons for that application.
+- Use the buttons on your smartphone's screen! The server detects your active application, and the smartphone displays relevant buttons for that application.
 
 ## Compatibility
 
 ### Server
 
-The server can run on the following systems :
+The server can run on the following systems:
 
 - Windows 10
 - Linux, using pretty much any X server  
@@ -24,7 +24,7 @@ _**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdo
 
 ### Programs
 
-The following programs will display buttons for the following applications :
+The following programs will display buttons for the following applications:
 
 - Chrome, Chromium
 - PowerPoint
