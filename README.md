@@ -19,17 +19,18 @@
 The server can run on the following systems:
 
 - Windows 10
-- Linux, using pretty much any X server  
-_**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdotool`_
+- OS X
+- Linux, using pretty much any X server
+_**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdotool`
 
 ### Programs
 
-The following programs will display buttons for the following applications:
+The client will display buttons for the following applications:
 
 - Chrome, Chromium
 - PowerPoint
 - Slack
-- WebStorm
+- WebStorm and other IntelliJ IDEs
 - Spotify
 - Discord
 - [And many more!](/server/layouts)
