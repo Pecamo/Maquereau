@@ -56,32 +56,50 @@ var vm = new Vue({
 			}
 		},
 		altTab: function () {
-			ws.send({
-				type: 'keystroke',
-				data: {
-					'keys': [['alt', 'tab']]
-				}
-			});
+			if (!useOSX) {
+				ws.send({
+					type: 'keystroke',
+					data: {
+						'keys': [['alt', 'tab']]
+					}
+				});
+			} else {
+				ws.send({
+					type: 'keystroke',
+					data: {
+						'keys': [['command', 'tab']]
+					}
+				});
+			}
 		},
 		altShiftTab: function () {
-			ws.send({
-				type: 'keystroke',
-				data: {
-					'keys': [['alt', 'shift', 'tab']]
-				}
-			});
+			if (!useOSX) {
+				ws.send({
+					type: 'keystroke',
+					data: {
+						'keys': [['alt', 'shift', 'tab']]
+					}
+				});
+			} else {
+				ws.send({
+					type: 'keystroke',
+					data: {
+						'keys': [['command', 'shift', 'tab']]
+					}
+				});
+			}
 		}
 	}
-})
+});
 
 window.onload = function () {
 	onPageLoad();
-}
+};
 
 function onPageLoad() {
 	initWS();
 	useOSX = false;
-};
+}
 
 function initWS() {
 	ws = new ReconnectingWebSocket(document.location.origin.replace(/^http/, "ws") + "/ws");
@@ -89,12 +107,12 @@ function initWS() {
 	ws._send = ws.send;
 	ws.send = function (obj) {
 		ws._send(JSON.stringify(obj));
-	}
+	};
 
 	ws.onopen = function (event) {
 		vm.connected = true;
 		ws.send({ type: 'hello', data: {} });
-	}
+	};
 
 	ws.onmessage = function (event) {
 		var message = JSON.parse(event.data);
@@ -127,13 +145,13 @@ function initWS() {
 				console.warn('Unhandled message:', message);
 				break;
 		}
-	}
+	};
 
 	ws.onclose = function (event) {
 		console.warn("WebSocket closed:", event);
 		vm.connected = false;
 		vm.currentProcess = "Disconnected";
-	}
+	};
 
 	ws.onerror = function (event) {
 		console.error("WebSocket error:", event);
