@@ -92,7 +92,7 @@ router.ws('/ws', function (ws, req) {
 						processName = similarProcesses[processName];
 					}
 
-					let fileName = __dirname + '/processes/' + processName + '.json';
+					let fileName = __dirname + '/layouts/' + processName + '.json';
 
 					if (fs.existsSync(fileName)) {
 						try {
