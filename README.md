@@ -20,8 +20,8 @@ The server can run on the following systems:
 
 - Windows 10
 - OS X
-- Linux, using pretty much any X server
-_**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdotool`
+- Linux, using pretty much any X server  
+_**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdotool`_
 
 ### Programs
 
