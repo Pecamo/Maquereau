@@ -1,0 +1,145 @@
+{
+  "tiles":
+  [
+    {
+      "title": "New Tab",
+      "subtitle": "Open a new tab",
+      "style": {
+      },
+      "icon": "tab-new_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "t"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Close Tab",
+      "subtitle": "Open a new tab",
+      "style": {
+      },
+      "icon": "tab-close_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "w"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Split Horizontally",
+      "subtitle": "Split terminals horizontally",
+      "style": {
+      },
+      "icon": "split-horizontal_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "o"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Split Vertically",
+      "subtitle": "Split terminals vertically",
+      "style": {
+      },
+      "icon": "split-vertical_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "e"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Up",
+      "subtitle": "Move to the terminal above the current one",
+      "style": {
+      },
+      "icon": "arrow-up_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "up"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Down",
+      "subtitle": "Move to the terminal below the current one",
+      "style": {
+      },
+      "icon": "arrow-down_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "down"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Left",
+      "subtitle": "Move to the terminal left of the current one",
+      "style": {
+      },
+      "icon": "arrow-left_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "left"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Right",
+      "subtitle": "Move to the terminal right of the current one",
+      "style": {
+      },
+      "icon": "arrow-right_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "right"
+          ]
+        ]
+      }
+    }
+  ]
+}

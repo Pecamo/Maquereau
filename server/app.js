@@ -25,10 +25,11 @@ let titleOf = {
 	"POWERPNT" : "PowerPoint",
 	"slack" : "Slack",
 	"spotify" : "Spotify",
-    "WebStorm" : "WebStorm",
-    "PyCharm" : "PyCharm",
+	"WebStorm" : "WebStorm",
+	"PyCharm" : "PyCharm",
 	"Unity" : "Unity",
-	"Discord" : "Discord"
+	"Discord" : "Discord",
+	"terminator": "terminator"
 };
 
 function styleOf(name) {
@@ -46,8 +47,8 @@ app.use(express.static('views/static'));
 
 let similarProcesses = {
 	"chromium": "chrome",
-    "PyCharm": "WebStorm",
-    "idea": "WebStorm"
+	"PyCharm": "WebStorm",
+	"idea": "WebStorm"
 };
 
 router.get('/', function (req, res) {
@@ -133,12 +134,12 @@ function processWatcher() {
 				}));
 			}
 		}
-        out.clearLine();
-        out.cursorTo(0);
-        out.write("Current process : " + process);
-        if (!isWindows) {
-            setTimeout(processWatcher, timeInterval);
-        }
+		out.clearLine();
+		out.cursorTo(0);
+		out.write("Current process : " + process);
+		if (!isWindows) {
+			setTimeout(processWatcher, timeInterval);
+		}
 	});
 }
 
