@@ -24,12 +24,6 @@ let titleOf = {
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
-	"slack" : "Slack",
-	"spotify" : "Spotify",
-    "WebStorm" : "WebStorm",
-    "PyCharm" : "PyCharm",
-	"Unity" : "Unity",
-	"Discord" : "Discord"
 };
 
 function styleOf(name) {
@@ -47,8 +41,8 @@ app.use(express.static('views/static'));
 let similarProcesses = {
 	"Google Chrome" : "chrome",
 	"chromium": "chrome",
-    "PyCharm": "WebStorm",
-    "idea": "WebStorm"
+	"PyCharm": "WebStorm",
+	"idea": "WebStorm"
 };
 
 let useOSX = process.platform.toLowerCase().includes('darwin');
@@ -68,11 +62,13 @@ router.ws('/ws', function (ws, req) {
 					ws.send(JSON.stringify(msg));
 					break;
 				case 'hello':
+					let title = (typeof titleOf[currentProcess] !== 'undefined') ? titleOf[currentProcess] : currentProcess;
+
 					ws.send(JSON.stringify({
 						type: "process-changed",
 						data: {
 							name: currentProcess,
-							title: titleOf[currentProcess],
+							title: title,
 							style: styleOf(currentProcess),
 							useOSX: useOSX
 						}
@@ -96,12 +92,17 @@ router.ws('/ws', function (ws, req) {
 						processName = similarProcesses[processName];
 					}
 
-					let fileName = __dirname + '/processes/' + processName + '.json';
+					let fileName = __dirname + '/layouts/' + processName + '.json';
 
 					if (fs.existsSync(fileName)) {
-						let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-						let payload = JSON.stringify({type: 'layout', data: fileContent});
-						ws.send(payload);
+						try {
+							let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
+							let payload = JSON.stringify({type: 'layout', data: fileContent});
+							ws.send(payload);
+						} catch (e) {
+							console.error('Error probably while reading Json file: ' + fileName);
+							console.error(e);
+						}
 					} else {
 						console.warn('Layout for "' + processName + '" doesn\'t exists');
 					}
@@ -121,24 +122,26 @@ function processWatcher() {
 		if (currentProcess !== process) {
 			currentProcess = process;
 
+			let title = (typeof titleOf[process] !== 'undefined') ? titleOf[process] : process;
+
 			for (let client of ws.getWss().clients) {
 				client.send(JSON.stringify({
 					type: "process-changed",
 					data: {
 						name: process,
-						title: titleOf[process],
+						title: title,
 						style: styleOf(process),
 						useOSX: useOSX
 					}
 				}));
 			}
 		}
-        out.clearLine();
-        out.cursorTo(0);
-        out.write("Current process : " + process);
-        if (!isWindows) {
-            setTimeout(processWatcher, timeInterval);
-        }
+		out.clearLine();
+		out.cursorTo(0);
+		out.write("Current process : " + process);
+		if (!isWindows) {
+			setTimeout(processWatcher, timeInterval);
+		}
 	});
 }
 
