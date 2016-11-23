@@ -29,6 +29,11 @@
         "sendKeyStroke": [
           "right"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "right"
+        ]
       }
     },
     {
@@ -41,6 +46,12 @@
       "width": 2,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "tab",
+          "enter"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "tab",
           "enter"
@@ -61,6 +72,12 @@
           "1",
           "enter"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "1",
+          "enter"
+        ]
       }
     },
     {
@@ -73,6 +90,11 @@
       "width": 2,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "escape"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "escape"
         ]
