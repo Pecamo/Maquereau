@@ -49,7 +49,7 @@
       "actionOSX": {
         "sendKeyStroke": [
           [
-            "control",
+            "command",
             "alt",
             "right"
           ]
