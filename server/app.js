@@ -35,8 +35,7 @@ let titleOf = {
 function styleOf(name) {
 	let fileName = __dirname + '/styles/' + name + '.json';
 	if (fs.existsSync(fileName)) {
-		let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-		return fileContent;
+		return JSON.parse(fs.readFileSync(fileName, 'utf8'));
 	} else {
 		return {};
 	}

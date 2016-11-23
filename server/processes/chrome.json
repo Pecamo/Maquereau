@@ -23,8 +23,8 @@
         "sendKeyStroke": [
           [
             "command",
-            "shift",
-            "tab"
+            "alt",
+            "left"
           ]
         ]
       }
@@ -49,8 +49,9 @@
       "actionOSX": {
         "sendKeyStroke": [
           [
-            "command",
-            "tab"
+            "control",
+            "alt",
+            "right"
           ]
         ]
       }
