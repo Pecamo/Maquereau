@@ -20,7 +20,7 @@ let out = process.stdout;
 let getFocusProcess = require('./get-focus-process');
 
 let titleOf = {
-	"Google Chrome OSX" : "Google Chrome",
+	"Google Chrome" : "Google Chrome",
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
@@ -28,7 +28,8 @@ let titleOf = {
 	"spotify" : "Spotify",
     "WebStorm" : "WebStorm",
     "PyCharm" : "PyCharm",
-	"Unity" : "Unity"
+	"Unity" : "Unity",
+	"Discord" : "Discord"
 };
 
 function styleOf(name) {
@@ -45,11 +46,13 @@ app.use(router);
 app.use(express.static('views/static'));
 
 let similarProcesses = {
-	"Google Chrome OSX" : "chrome",
+	"Google Chrome" : "chrome",
 	"chromium": "chrome",
     "PyCharm": "WebStorm",
     "idea": "WebStorm"
 };
+
+let useOSX = process.platform.toLowerCase().includes('darwin');
 
 router.get('/', function (req, res) {
 	res.sendFile(__dirname + '/views/index.html');
@@ -71,7 +74,8 @@ router.ws('/ws', function (ws, req) {
 						data: {
 							name: currentProcess,
 							title: titleOf[currentProcess],
-							style: styleOf(currentProcess)
+							style: styleOf(currentProcess),
+							useOSX: useOSX
 						}
 					}));
 					break;
@@ -124,7 +128,8 @@ function processWatcher() {
 					data: {
 						name: process,
 						title: titleOf[process],
-						style: styleOf(process)
+						style: styleOf(process),
+						useOSX: useOSX
 					}
 				}));
 			}

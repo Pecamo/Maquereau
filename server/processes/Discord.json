@@ -1,0 +1,154 @@
+{
+  "tiles":
+  [
+    {
+      "title": "Server up",
+      "subtitle": "Opens the upper server",
+      "style": {
+        "background-color": "#7289DA",
+        "color": "#FFFFFF"
+      },
+      "icon": "arrow-up_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "alt",
+            "up"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Channel up",
+      "subtitle": "Opens the upper channel",
+      "style": {
+        "background-color": "#36393E"
+      },
+      "icon": "hashtag-arrow-up_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "up"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Server down",
+      "subtitle": "Opens the lower server",
+      "style": {
+        "background-color": "#7289DA",
+        "color": "#FFFFFF"
+      },
+      "icon": "arrow-down_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "alt",
+            "down"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Channel down",
+      "subtitle": "Opens the lower channel",
+      "style": {
+        "background-color": "#36393E"
+      },
+      "icon": "hashtag-arrow-down_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "down"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Mute",
+      "subtitle": "Toggles self mute",
+      "style": {
+        "background-color": "#2E3136"
+      },
+      "icon": "microphone_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "m"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Deafen",
+      "subtitle": "Toggles self deafen",
+      "style": {
+        "background-color": "#2E3136"
+      },
+      "icon": "headphones_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "shift",
+            "d"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Answer call",
+      "subtitle": "Accepts the incoming call",
+      "style": {
+        "background-color": "#43B581",
+        "color": "#FFFFFF"
+      },
+      "icon": "phone-up_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "enter"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Decline call",
+      "subtitle": "Declines the incoming call",
+      "style": {
+        "background-color": "#F04747",
+        "color": "#FFFFFF"
+      },
+      "icon": "phone-down_white.png",
+      "width": 1,
+      "height": 1,
+      "action": {
+        "sendKeyStroke": [
+          "escape"
+        ]
+      }
+    }
+  ]
+}

@@ -26,7 +26,7 @@
 					v-for="tile in tiles"
 					v-bind:style="[{ backgroundImage: 'url(\'/img/icons/' + tile.icon + '\')' }, tile.style]"
 					v-bind:data-keystroke="tile.action.sendKeyStroke"
-					v-on:click="onTileClicked(tile.action, $event)">
+					v-on:click="onTileClicked(tile.action, tile.actionOSX, $event)">
 					<h3 class="title">{{ tile.title }}</h3>
 					<p class="subtitle">{{ tile.subtitle }}</p>
 				</div>
