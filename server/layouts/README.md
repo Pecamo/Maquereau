@@ -18,8 +18,8 @@ Legend :
 | [PowerPoint](http://office.microsoft.com/powerpoint)                      | ✅ | ❓ | ❓ | |
 | [PyCharm](https://www.jetbrains.com/pycharm)                              | ✅ | ❓ | ❓ | |
 | [Slack](https://slack.com)                                                | ✅ | ❓ | ❓ | |
-| [Spotify](https://www.spotify.com)                                        | ✅ | ❓ | ❌ | |
+| [Spotify](https://www.spotify.com)                                        | ✅ | ❓ | ❓ | |
 | [Terminator](https://gnometerminator.blogspot.ch)                         | -  | ✅ | ❌ | |
-| [Unity](https://unity3d.com)                                              | ✅ | ❓ | ❌ | |
+| [Unity](https://unity3d.com)                                              | ✅ | ❓ | ❓ | |
 | [WebStorm](https://www.jetbrains.com/webstorm)                            | ✅ | ❓ | ❓ | |
 

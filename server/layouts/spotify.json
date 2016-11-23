@@ -14,6 +14,11 @@
         "sendKeyStroke": [
           "space"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "space"
+        ]
       }
     },
     {
@@ -26,6 +31,11 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "audio_mute"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "audio_mute"
         ]
@@ -44,6 +54,11 @@
         "sendKeyStroke": [
           "audio_vol_down"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "audio_vol_down"
+        ]
       }
     },
     {
@@ -56,6 +71,11 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "audio_vol_up"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "audio_vol_up"
         ]
@@ -74,6 +94,11 @@
         "sendKeyStroke": [
           "audio_prev"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "audio_prev"
+        ]
       }
     },
     {
@@ -86,6 +111,11 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "audio_next"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "audio_next"
         ]

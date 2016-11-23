@@ -17,6 +17,14 @@
             "p"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "p"
+          ]
+        ]
       }
     },
     {
@@ -36,6 +44,15 @@
             "p"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "shift",
+            "p"
+          ]
+        ]
       }
     },
     {
@@ -51,6 +68,15 @@
         "sendKeyStroke": [
           [
             "control",
+            "alt",
+            "p"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
             "alt",
             "p"
           ]
