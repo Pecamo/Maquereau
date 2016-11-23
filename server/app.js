@@ -20,6 +20,7 @@ let out = process.stdout;
 let getFocusProcess = require('./get-focus-process');
 
 let titleOf = {
+	"Google Chrome" : "Google Chrome",
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
@@ -28,8 +29,7 @@ let titleOf = {
 function styleOf(name) {
 	let fileName = __dirname + '/styles/' + name + '.json';
 	if (fs.existsSync(fileName)) {
-		let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-		return fileContent;
+		return JSON.parse(fs.readFileSync(fileName, 'utf8'));
 	} else {
 		return {};
 	}
@@ -39,10 +39,13 @@ app.use(router);
 app.use(express.static('views/static'));
 
 let similarProcesses = {
+	"Google Chrome" : "chrome",
 	"chromium": "chrome",
 	"PyCharm": "WebStorm",
 	"idea": "WebStorm"
 };
+
+let useOSX = process.platform.toLowerCase().includes('darwin');
 
 router.get('/', function (req, res) {
 	res.sendFile(__dirname + '/views/index.html');
@@ -66,7 +69,8 @@ router.ws('/ws', function (ws, req) {
 						data: {
 							name: currentProcess,
 							title: title,
-							style: styleOf(currentProcess)
+							style: styleOf(currentProcess),
+							useOSX: useOSX
 						}
 					}));
 					break;
@@ -111,7 +115,7 @@ router.ws('/ws', function (ws, req) {
 
 let currentProcess = "";
 const timeInterval = 500;
-let isWindows = (process.platform.toLowerCase().includes('win'));
+let isWindows = (process.platform.toLowerCase().includes('win')) & !(process.platform.toLowerCase().includes('darwin'));
 
 function processWatcher() {
 	getFocusProcess(function (process) {
@@ -126,7 +130,8 @@ function processWatcher() {
 					data: {
 						name: process,
 						title: title,
-						style: styleOf(process)
+						style: styleOf(process),
+						useOSX: useOSX
 					}
 				}));
 			}

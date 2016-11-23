@@ -2,12 +2,26 @@
 
 const exec = require('child_process').exec;
 const spawn = require('child_process').spawn;
-const readline = require('readline');
 
 const regexPattern = new RegExp(/(?:[\d\.]+\s+){6,7}((?:\s?\w+)+)/);
 
 function getFocusProcess (cb) {
-	if (process.platform.toLowerCase().includes('win')) {
+	// OS X
+	if (process.platform.toLowerCase().includes('darwin')) {
+		let proc = exec('osascript osxproc.scpt');
+		proc.stdout.on('data', (data) => {
+			cb(data.trim());
+		});
+
+		proc.stderr.on('data', (data) => {
+			console.log(`stderr: ${data}`);
+		});
+
+		proc.on('close', (code) => {
+		});
+
+	// Windows
+	} else if (process.platform.toLowerCase().includes('win')) {
 		let child = spawn("powershell.exe",["-ExecutionPolicy", "ByPass", "-File", "windowsproc.ps1"]);
 		child.stdout.on("data",function(data){
 			var found = data.toString().match(regexPattern);
@@ -26,6 +40,7 @@ function getFocusProcess (cb) {
 
 		child.stdin.end();
 
+	// Linux
 	} else if (process.platform.toLowerCase().includes('linux')) {
 		let proc = exec('ps -p $(xdotool getactivewindow getwindowpid) -o comm=');
 

@@ -18,6 +18,15 @@
             "tab"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "alt",
+            "left"
+          ]
+        ]
       }
     },
     {
@@ -34,6 +43,15 @@
           [
             "control",
             "tab"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "alt",
+            "right"
           ]
         ]
       }
@@ -54,6 +72,14 @@
             "t"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "t"
+          ]
+        ]
       }
     },
     {
@@ -69,6 +95,14 @@
         "sendKeyStroke": [
           [
             "control",
+            "w"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
             "w"
           ]
         ]
@@ -92,6 +126,15 @@
             "t"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "shift",
+            "t"
+          ]
+        ]
       }
     },
     {
@@ -107,6 +150,15 @@
         "sendKeyStroke": [
           [
             "f11"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "control",
+            "f"
           ]
         ]
       }
@@ -128,6 +180,14 @@
             "left"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "left"
+          ]
+        ]
       }
     },
     {
@@ -144,6 +204,14 @@
         "sendKeyStroke": [
           [
             "alt",
+            "right"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
             "right"
           ]
         ]
