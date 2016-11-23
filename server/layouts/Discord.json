@@ -19,6 +19,15 @@
             "up"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "alt",
+            "up"
+          ]
+        ]
       }
     },
     {
@@ -31,6 +40,14 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "up"
+          ]
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           [
             "alt",
@@ -57,6 +74,15 @@
             "down"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "alt",
+            "down"
+          ]
+        ]
       }
     },
     {
@@ -69,6 +95,14 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "down"
+          ]
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           [
             "alt",
@@ -94,6 +128,15 @@
             "m"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "shift",
+            "m"
+          ]
+        ]
       }
     },
     {
@@ -109,6 +152,15 @@
         "sendKeyStroke": [
           [
             "control",
+            "shift",
+            "d"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
             "shift",
             "d"
           ]
@@ -132,6 +184,14 @@
             "enter"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "enter"
+          ]
+        ]
       }
     },
     {
@@ -145,6 +205,11 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "escape"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "escape"
         ]
