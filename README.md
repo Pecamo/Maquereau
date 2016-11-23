@@ -1,5 +1,5 @@
 # ![Maquereau logo](maquereau.png) Maquereau
-**Maquereau** is a tool to let you use your phone as a remote control for multiple applications opened on your desktop. Use your smartphone as a keyboard extension !
+**Maquereau** is a tool allowing you use your phone as a remote control for multiple applications opened on your desktop. Use your smartphone as a keyboard extension!
 
 ## Installation
 
@@ -19,8 +19,8 @@
 The server can run on the following systems :
 
 - Windows 10
-- Linux using pretty much any X server
-	- Ubuntu : you may have to install `xdotool` by typing `sudo apt-get install xdotool`
+- Linux, using pretty much any X server  
+_**Note**: You may have to install `xdotool` by typing `sudo apt-get install xdotool`_
 
 ### Programs
 
@@ -30,6 +30,9 @@ The following programs will display buttons for the following applications :
 - PowerPoint
 - Slack
 - WebStorm
+- Spotify
+- Discord
+- [And many more!](/server/layouts)
 
 ## Troubleshooting
 
