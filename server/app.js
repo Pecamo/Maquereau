@@ -115,7 +115,7 @@ router.ws('/ws', function (ws, req) {
 
 let currentProcess = "";
 const timeInterval = 500;
-let isWindows = (process.platform.toLowerCase().includes('win')) & !(process.platform.toLowerCase().includes);
+let isWindows = (process.platform.toLowerCase().includes('win')) & !(process.platform.toLowerCase().includes('darwin'));
 
 function processWatcher() {
 	getFocusProcess(function (process) {
