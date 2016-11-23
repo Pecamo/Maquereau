@@ -1,4 +1,5 @@
 var ws;
+var useOSX;
 
 var vm = new Vue({
 	el: '#container',
@@ -25,14 +26,33 @@ var vm = new Vue({
 		]
 	},
 	methods: {
-		onTileClicked: function (action, event) {
-			if (action.sendKeyStroke) {
-				ws.send({
-					type: 'keystroke',
-					data: {
-						'keys': action.sendKeyStroke
+		onTileClicked: function (action, actionOSX, event) {
+			if (!useOSX) {
+				try {
+					if (action.sendKeyStroke) {
+						ws.send({
+							type: 'keystroke',
+							data: {
+								'keys': action.sendKeyStroke
+							}
+						});
 					}
-				});
+				} catch (err) {
+					console.error("Button might have only OSX binding. Error : " + err);
+				}
+			} else {
+				try {
+					if (actionOSX.sendKeyStroke) {
+						ws.send({
+							type: 'keystroke',
+							data: {
+								'keys': actionOSX.sendKeyStroke
+							}
+						});
+					}
+				} catch (err) {
+					console.error("Button might not have OSX binding. Error : " + err);
+				}
 			}
 		},
 		altTab: function () {
@@ -60,6 +80,7 @@ window.onload = function () {
 
 function onPageLoad() {
 	initWS();
+	useOSX = false;
 };
 
 function initWS() {
@@ -86,11 +107,13 @@ function initWS() {
 				// TODO put layouts in cache and try to recover them
 				queryLayout(message.data.name);
 
+				useOSX = message.data.useOSX;
+
 				if (message.data.title) {
 					vm.currentProcess = message.data.title;
 				}
 
-				console.log(message.data)
+				console.log(message.data);
 
 				if (message.data.style) {
 					vm.containerStyle = message.data.style;
