@@ -4,7 +4,7 @@
 ## Installation
 
 - Install npm with [Node.js](https://nodejs.org/en/)
-- Run `npm install` in the project's root directory
+- Run `npm install` in the project's [server](/server) directory
 
 ## Usage
 
