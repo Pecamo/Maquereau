@@ -95,9 +95,14 @@ router.ws('/ws', function (ws, req) {
 					let fileName = __dirname + '/processes/' + processName + '.json';
 
 					if (fs.existsSync(fileName)) {
-						let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-						let payload = JSON.stringify({type: 'layout', data: fileContent});
-						ws.send(payload);
+						try {
+							let fileContent = JSON.parse(fs.readFileSync(fileName, 'utf8'));
+							let payload = JSON.stringify({type: 'layout', data: fileContent});
+							ws.send(payload);
+						} catch (e) {
+							console.error('Error probably while reading Json file: ' + fileName);
+							console.error(e);
+						}
 					} else {
 						console.warn('Layout for "' + processName + '" doesn\'t exists');
 					}
