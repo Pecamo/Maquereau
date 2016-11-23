@@ -17,6 +17,14 @@
             ","
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            ","
+          ]
+        ]
       }
     },
     {
@@ -32,6 +40,15 @@
         "sendKeyStroke": [
           [
             "control",
+            "shift",
+            "s"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
             "shift",
             "s"
           ]
@@ -55,6 +72,15 @@
             "f"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "command",
+            "f"
+          ]
+        ]
       }
     },
     {
@@ -74,6 +100,15 @@
             "a"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "command",
+            "shift",
+            "a"
+          ]
+        ]
       }
     },
     {
@@ -88,9 +123,16 @@
       "action": {
         "sendKeyStroke": [
           [
-            "control",
-            "shift",
-            "tab"
+            "alt",
+            "up"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "up"
           ]
         ]
       }
@@ -107,8 +149,16 @@
       "action": {
         "sendKeyStroke": [
           [
-            "control",
-            "tab"
+            "alt",
+            "down"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "alt",
+            "down"
           ]
         ]
       }

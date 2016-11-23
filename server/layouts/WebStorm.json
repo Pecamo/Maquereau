@@ -17,6 +17,14 @@
             "f10"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "shift",
+            "f10"
+          ]
+        ]
       }
     },
     {
@@ -32,7 +40,15 @@
         "sendKeyStroke": [
           [
             "shift",
-            "f19"
+            "f9"
+          ]
+        ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "shift",
+            "f9"
           ]
         ]
       }
@@ -47,6 +63,14 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          [
+            "control",
+            "f5"
+          ]
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           [
             "control",
@@ -71,6 +95,14 @@
             "f2"
           ]
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          [
+            "shift",
+            "f2"
+          ]
+        ]
       }
     },
     {
@@ -83,6 +115,11 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          "f9"
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           "f9"
         ]
@@ -101,6 +138,11 @@
         "sendKeyStroke": [
           "f8"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "f8"
+        ]
       }
     },
     {
@@ -116,6 +158,11 @@
         "sendKeyStroke": [
           "f7"
         ]
+      },
+      "actionOSX": {
+        "sendKeyStroke": [
+          "f7"
+        ]
       }
     },
     {
@@ -128,6 +175,14 @@
       "width": 1,
       "height": 1,
       "action": {
+        "sendKeyStroke": [
+          [
+            "shift",
+            "f8"
+          ]
+        ]
+      },
+      "actionOSX": {
         "sendKeyStroke": [
           [
             "shift",
