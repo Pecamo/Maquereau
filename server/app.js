@@ -43,7 +43,7 @@ let similarProcesses = {
 	"Google Chrome" : "chrome",
 	"chromium": "chrome",
 	"PyCharm": "WebStorm",
-	"Pycharm64": "WebStorm",
+	"pycharm64": "WebStorm",
 	"idea": "WebStorm"
 };
 
