@@ -24,6 +24,7 @@ let titleOf = {
 	"chrome" : "Google Chrome",
 	"chromium" : "Google Chrome",
 	"POWERPNT" : "PowerPoint",
+	"pycharm64" : "PyCharm"
 };
 
 function styleOf(name) {
@@ -42,6 +43,7 @@ let similarProcesses = {
 	"Google Chrome" : "chrome",
 	"chromium": "chrome",
 	"PyCharm": "WebStorm",
+	"Pycharm64": "WebStorm",
 	"idea": "WebStorm"
 };
 
