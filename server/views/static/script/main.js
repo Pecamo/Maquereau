@@ -5,8 +5,9 @@ var vm = new Vue({
 	el: '#container',
 	data: {
 		connected: false,
-		currentProcess: "Connecting...",
+		currentProcess: "Connecting",
 		containerStyle: {},
+		message: "Please wait while the device is connecting to your desktop...",
 		tiles: [
 			{
 				"title":"Connecting",
@@ -139,8 +140,15 @@ function initWS() {
 
 				break;
 			case 'layout':
-				vm.tiles = message.data.tiles;
-				break;
+				if ('error' in message && !!message.error) {
+					vm.tiles = [];
+					vm.message = message.error;
+					break;
+				} else {
+					vm.tiles = message.data.tiles;
+					vm.message = "";
+					break;
+				}
 			default:
 				console.warn('Unhandled message:', message);
 				break;
@@ -151,6 +159,8 @@ function initWS() {
 		console.warn("WebSocket closed:", event);
 		vm.connected = false;
 		vm.currentProcess = "Disconnected";
+		vm.tiles = [];
+		vm.message = "Disconnected from the Maquereau server.";
 	};
 
 	ws.onerror = function (event) {

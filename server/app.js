@@ -106,7 +106,8 @@ router.ws('/ws', function (ws, req) {
 							console.error(e);
 						}
 					} else {
-						console.warn('Layout for "' + processName + '" doesn\'t exists');
+						let payload = JSON.stringify({type: 'layout', error: "This application isn't supported yet."});
+						ws.send(payload);
 					}
 			}
 		} else {
