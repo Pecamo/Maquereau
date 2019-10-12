@@ -31,6 +31,12 @@ h1 {
 	font-size: 5vh;
 }
 
+.page-title {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 h2 {
 	font-size: 35px;
 }
@@ -49,7 +55,7 @@ a {
 }
 
 p {
-	margin: 10px 0; 
+	margin: 10px 0;
 }
 
 #container {
@@ -61,8 +67,7 @@ p {
 
 	background: black;
 
-	padding: 20px;
-	padding-top: 10px;
+	padding: 10px;
 
 	&.disconnected {
 		background: #330000 !important;
@@ -87,16 +92,16 @@ p {
 	.tile {
 		@margin: 5px;
 		position: relative;
-		
+
 		flex: 1 1 calc(49% - @margin);
-		
+
 		border: 4px solid white;
-		
+
 		margin: @margin;
 		padding: 30px;
-		padding-bottom: 0px;
+		padding-bottom: 0;
 
-		text-align: center;	
+		text-align: center;
 
 		background-size: auto 50%;
 		background-repeat: no-repeat;
@@ -149,4 +154,9 @@ footer {
 
 		cursor: pointer;
 	}
+}
+
+.logo {
+	max-height: 1em;
+	padding-right: 10px;
 }
